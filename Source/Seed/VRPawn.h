@@ -4,12 +4,17 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
+#include "MotionControllerComponent.h"
 #include "VRPawn.generated.h"
 
 UCLASS()
 class SEED_API AVRPawn : public APawn
 {
 	GENERATED_BODY()
+
+private:
+	UMotionControllerComponent *_leftMotionController;
+	UMotionControllerComponent *_rightMotionController;
 
 public:
 	// Sets default values for this pawn's properties
